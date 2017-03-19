@@ -4,3 +4,5 @@ include
 lib/
 tmp
 pip-selfcheck.json
+app/__pycache__
+*.swp
