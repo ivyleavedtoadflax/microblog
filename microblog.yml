@@ -30,5 +30,5 @@ pre_window: source bin/activate
 windows:
   - editor: 
   - server: ./run.py
-  - sql: cd tmp; watch "sqlite3 temp.db -batch  '.tables'" 
+  - sql: watch "sqlite3 app.db -batch  'select * from user;'" 
   - git: 
