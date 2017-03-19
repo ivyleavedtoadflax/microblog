@@ -5,6 +5,10 @@ setup(
     packages=['app'],
     include_package_data=True,
     install_requires=[
-        'flask',
+        'Flask',
+        'Flask-Login',
+        'Flask-OpenID',
+        'Flask-SQLAlchemy',
+        'Flask-WTF'
     ],
 )

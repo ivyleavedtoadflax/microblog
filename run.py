@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!bin/python
 
 import os, sys
 
