@@ -1,18 +1,18 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object('config')
-db = SQLAlchemy(app)
 
-from app import views, models
-
-# Support for login:
-
+from flask_sqlalchemy import SQLAlchemy
 import os
 from flask_login import LoginManager
 from flask_openid import OpenID
 from config import basedir
+from app import views, models
+
+db = SQLAlchemy(app)
+
+# Support for login:
 
 lm = LoginManager()
 lm.init_app(app)

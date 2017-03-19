@@ -7,3 +7,5 @@ pip-selfcheck.json
 app/__pycache__
 *.swp
 __pycache__
+flask
+*.egg-info
