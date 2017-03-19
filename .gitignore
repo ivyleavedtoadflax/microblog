@@ -6,3 +6,4 @@ tmp
 pip-selfcheck.json
 app/__pycache__
 *.swp
+__pycache__
