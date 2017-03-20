@@ -9,3 +9,4 @@ app/__pycache__
 __pycache__
 flask
 *.egg-info
+test.db
