@@ -4,6 +4,19 @@ from hashlib import md5
 # Create the models for the database relations
 
 class User(db.Model):
+
+    @staticmethod
+    def make_unique_nickname(nickname):
+        if User.query.filter_by(nickname=nickname).first() is None:
+            return nickname
+        version = 2
+        while True:
+            new_nickname = nickname + str(version)
+            if User.query.filter_by(nickname=new_nickname).first() is None:
+                break
+            version += 1
+        return new_nickname
+
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
